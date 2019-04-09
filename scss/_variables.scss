@@ -1,0 +1,21 @@
+$bgColor: #979797;
+
+$mobileScreen: 425px;
+$tabletScreen: 768px;
+$desktopScreen: 1024px;
+
+@mixin tablet
+{
+    @media (min-width: $mobileScreen) and (max-width: $tabletScreen)
+    {
+        @content;
+    }
+}
+
+@mixin desktop
+{
+    @media (min-width: $desktopScreen)
+    {
+        @content;
+    }
+}
