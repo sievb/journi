@@ -23,37 +23,85 @@ section
 
     &:last-of-type
     {
-        height: 75vh;
+        height: 90vh;
     }
 
     div
     {
-        flex-direction: row;
-        height: 100%;
-        width: 100%;
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 5% 0;
+        max-width: $desktopScreen;
+
+        @include desktop
+        {
+            margin: 25px 0;
+        }
 
         img
         {
             border-radius: 50%;
             width: 25%;
+            height: auto;
+            margin: 2.5%;
+            max-width: 100px;
+
+            @include desktop
+            {
+                margin: 15px;
+            }
         }
     }
 }
 
 footer
 {
-    height: 25vh;
+    height: 10vh;
     width: 100%;
     background-color: aqua;
 }
 
 h1
 {
-    font-size: 2em;
+    font-size: 1.75em;
+    margin: 5% 0;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include desktop
+    {
+        margin: 40px 0;
+        font-size: 1.35em;
+    }
 }
 
 p
 {
     width: 85%;
+    line-height: 140%;
+    max-width: $tabletScreen;
+
+    @include desktop
+    {
+        font-size: 0.8em;
+    }
+}
+
+.featuresImg
+{
+    height: 60%;
+    width: auto;
+
+    @include tablet
+    {
+        height: 75%;
+    }
+
+    @include desktop
+    {
+        height: 80%;
+    }
 }
