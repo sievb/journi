@@ -16,43 +16,39 @@ section
     align-items: center;
     justify-content: center;
 
-    &:nth-child(even)
-    {
-        background-color: $bgColor;
-    }
-
     &:last-of-type
     {
         height: 90vh;
+        background-color: #EFE6DF;
+    }
+}
+
+.groupPhotos
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 5% 0;
+    max-width: $desktopScreen;
+
+    @include desktop
+    {
+        margin: 25px 0;
     }
 
-    div
+    img
     {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        margin: 5% 0;
-        max-width: $desktopScreen;
+        border-radius: 50%;
+        width: 25%;
+        height: auto;
+        margin: 2.5%;
+        max-width: 100px;
 
         @include desktop
         {
-            margin: 25px 0;
-        }
-
-        img
-        {
-            border-radius: 50%;
-            width: 25%;
-            height: auto;
-            margin: 2.5%;
-            max-width: 100px;
-
-            @include desktop
-            {
-                margin: 15px;
-            }
+            margin: 15px;
         }
     }
 }
@@ -61,7 +57,25 @@ footer
 {
     height: 10vh;
     width: 100%;
-    background-color: aqua;
+    background-color: #F7F3ED;
+    display: flex;
+    align-items: center;
+
+    img
+    {
+        height: 100%;
+        width: auto;
+    }
+
+    div
+    {
+        margin-left: 2.5%;
+    }
+
+    p
+    {
+        width: auto;
+    }
 }
 
 h1
@@ -90,18 +104,58 @@ p
     }
 }
 
-.featuresImg
+.carousel
 {
-    height: 60%;
-    width: auto;
+    position: relative;
+}
 
-    @include tablet
+.carouselImage
+{
+    text-align: center;
+    display: none;
+
+    img
     {
-        height: 75%;
+        width: 50%;
+        height: auto;
     }
+}
 
-    @include desktop
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next 
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dots
+{
+    text-align: center;
+
+    span
     {
-        height: 80%;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 30% 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
     }
 }
