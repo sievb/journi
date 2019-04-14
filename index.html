@@ -6,7 +6,6 @@
         <title>journi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
-        <!-- <script src="index.js"></script> -->
     </head>
 
 <body>
@@ -17,28 +16,32 @@
     <section>
         <div class="carousel">
             <div class="carouselImage">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <img src="img/iPhone1.png" alt="">
-                <div class="caption">Caption</div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption">Caption 1</div>
             </div>
 
             <div class="carouselImage">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <img src="img/iPhone2.png" alt="">
-                <div class="caption">Caption</div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption">Caption 2</div>
             </div>
 
             <div class="carouselImage">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <img src="img/iPhone3.png" alt="">
-                <div class="caption">Caption</div>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption">Caption 3</div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
         <div class="dots">
-            <span onclick="currentSlide(1)"></span> 
-            <span onclick="currentSlide(2)"></span> 
-            <span onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
     </section>
 
@@ -62,5 +65,7 @@
             <a href="mailto:journi@uw.edu">journi@uw.edu</a>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

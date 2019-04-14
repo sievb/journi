@@ -112,35 +112,56 @@ p
 .carouselImage
 {
     text-align: center;
-    display: none;
+    // display: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 
     img
     {
         width: 50%;
         height: auto;
+        transition: 0.3s;
+
+        @include tablet
+        {
+            max-width: 300px;
+        }
+
+        @include desktop
+        {
+            max-width: 300px;
+        }
+    }
+
+    div
+    {
+        width: 100%;
+        margin: 5%;
     }
 }
 
 .prev, .next 
 {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #000;
+    margin: 5%;
+    color: #bbb;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    font-size: 1.75em;
+    transition: 0.3s ease;
     user-select: none;
-}
 
-.next 
-{
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    @include tablet
+    {
+        font-size: 2.25em;
+    }
+
+    &:hover
+    {
+        color: #717171;
+    }
 }
 
 .dots
@@ -152,10 +173,14 @@ p
         cursor: pointer;
         height: 15px;
         width: 15px;
-        margin: 30% 2px;
+        margin: 0 3px;
+        display: inline-block;
         background-color: #bbb;
         border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
+
+        &.active, &:hover
+        {
+            background-color: #717171;
+        }
     }
 }
