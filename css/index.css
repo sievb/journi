@@ -155,13 +155,20 @@ p {
   text-align: center; }
   .dots span {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 3px;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.1em;
     display: inline-block;
     background-color: #bbb;
     border-radius: 50%; }
     .dots span.active, .dots span:hover {
       background-color: #717171; }
+    @media (min-width: 768px) {
+      .dots span {
+        height: 0.75em;
+        width: 0.75em; } }
+
+video {
+  width: 80%; }
 
 /*# sourceMappingURL=index.css.map */

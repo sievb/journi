@@ -171,9 +171,9 @@ p
     span
     {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 3px;
+        height: 1em;
+        width: 1em;
+        margin: 0 0.1em;
         display: inline-block;
         background-color: #bbb;
         border-radius: 50%;
@@ -182,5 +182,16 @@ p
         {
             background-color: #717171;
         }
+
+        @include desktop
+        {
+            height: 0.75em;
+            width: 0.75em;
+        }
     }
+}
+
+video
+{
+    width: 80%;
 }

@@ -24,3 +24,39 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "flex";
     dots[slideIndex-1].className += " active";
 }
+
+var personInfo = {
+    {
+        "name": "Angela Birchman",
+        "role": "Project Manager",
+        "portfolioLink": "https://www.google.com/"
+    },
+
+    {
+        "name": "Benjamin Siev",
+        "role": "Web Developer ( ͡° ͜ʖ ͡°)",
+        "portfolioLink": "https://www.google.com/"
+    },
+
+    {
+        "name": "Junior Tran-Thien",
+        "role": "Narrative Designer",
+        "portfolioLink": "https://www.google.com/"
+    },
+
+    {
+        "name": "Su Li",
+        "role": "App Developer",
+        "portfolioLink": "https://www.google.com/"
+    },
+
+    {
+        "name": "Yin Yin",
+        "role": "UI/UX Designer",
+        "portfolioLink": "https://www.google.com/"
+    }
+};
+
+$(document).ready() {
+    console.log(personInfo[0].name);
+}
