@@ -10,7 +10,7 @@
 
 <body>
     <section>
-        <video src="video/vid.mp4" controls></video>
+        <!-- <video src="video/vid.mp4" controls></video> -->
     </section>
 
     <section>
@@ -49,12 +49,19 @@
         <h1>Who we are</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui similique ratione inventore necessitatibus quidem? Nesciunt blanditiis iusto consectetur autem, eum est repudiandae alias quo magni expedita velit non obcaecati ad, sequi rerum sunt qui eveniet voluptas maiores amet, odit reiciendis.</p>
 
+        <div class="overlay" id="infoOverlay">
+            <div class="infoSection">
+                <a href="javascript:void(0)" class="closeBtn" onclick="closeOverlay()">&times;</a>
+                <div class="infoContent"></div>
+            </div>
+        </div>
+
         <div class="groupPhotos">
-            <img src="https://via.placeholder.com/150" alt="">
-            <img src="https://via.placeholder.com/150" alt="">
-            <img src="https://via.placeholder.com/150" alt="">
-            <img src="https://via.placeholder.com/150" alt="">
-            <img src="https://via.placeholder.com/150" alt="">
+            <img src="img/profile.png" class="profilePics" alt="">
+            <img src="img/profile.png" class="profilePics" alt="">
+            <img src="img/profile.png" class="profilePics" alt="">
+            <img src="img/profile.png" class="profilePics" alt="">
+            <img src="img/profile.png" class="profilePics" alt="">
         </div>
     </section>
 
