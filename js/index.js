@@ -81,22 +81,29 @@ window.onclick = function(event) {
 
 $(document).ready(function() {
     var userSelection = document.getElementsByClassName('profilePics');
+    
+    if($(window).width() < 768) {
+        for(var i = 0; i < userSelection.length; i++) {
+            (function(index) {
+                userSelection[index].addEventListener("click", function() {
+                    console.log(personInfo[index].name);
+                openOverlay();
 
-    for(var i = 0; i < userSelection.length; i++) {
-        (function(index) {
-            userSelection[index].addEventListener("click", function() {
-            console.log("Clicked index: " + index);
-            console.log(personInfo[index].name);
-            openOverlay();
-
-            $(".infoContent").append(
-                "<img src='" + personInfo[index].img + "'/>",
-                "<p>" + personInfo[index].name +"</p>",
-                "<p>" + personInfo[index].role +"</p>",
-                "<a href='" + personInfo[index].portfolioLink + "'>google.com</a>"
-            );
+                $(".infoContent").append(
+                    "<img src='" + personInfo[index].img + "'/>",
+                    "<p>" + personInfo[index].name +"</p>",
+                    "<p>" + personInfo[index].role +"</p>",
+                    "<a href='" + personInfo[index].portfolioLink + "'>google.com</a>"
+                );
+                })
             })
-        })
-        (i);
+            (i);
+        }
     }
+
+    $(".profilePics").hover(function() {
+        console.log(personInfo[$(this).index()].name);
+        
+        $(this).index().after("<p>Hello</p>");
+    })
 })

@@ -21,7 +21,7 @@ section
     &:last-of-type
     {
         height: 90vh;
-        background-color: #EFE6DF;
+        background-color: $lightYellow;
     }
 }
 
@@ -217,7 +217,7 @@ video
     width: 100%;
     position: relative;
     top: 25%;
-    background-color: #EFE6DF;
+    background-color: $lightYellow;
     display: flex;
     align-items: center;
 }
