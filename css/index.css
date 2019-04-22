@@ -47,7 +47,8 @@ table {
 
 body {
   overflow-x: hidden;
-  font-family: 'Helvetica', sans-serif; }
+  font-family: 'Helvetica', sans-serif;
+  color: #414B6E; }
 
 section {
   height: 100vh;
@@ -56,9 +57,38 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  section div {
+    height: 100%;
+    width: 75%;
+    margin: 20% 5%; }
   section:last-of-type {
-    height: 90vh;
-    background-color: #EFE6DF; }
+    height: 100%;
+    background-color: #FBF7F1; }
+
+#landing {
+  color: #fff;
+  background-color: #FBF7F1; }
+  #landing h1 {
+    font-size: 4em;
+    text-transform: lowercase; }
+  #landing h3 {
+    width: 60%;
+    font-size: 1.5em;
+    margin: 40% 0; }
+  #landing i {
+    font-size: 1.5em;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5%;
+    margin-top: 35%; }
+    #landing i:hover {
+      cursor: pointer; }
+
+.center {
+  text-align: center; }
+
+.logo {
+  height: 50px; }
 
 .groupPhotos {
   display: flex;
@@ -105,13 +135,9 @@ h1 {
       margin: 40px 0;
       font-size: 1.35em; } }
 
-p {
-  width: 85%;
-  line-height: 140%;
-  max-width: 768px; }
-  @media (min-width: 768px) {
-    p {
-      font-size: 0.8em; } }
+h4 {
+  font-size: 1.15em;
+  line-height: 150%; }
 
 .carousel {
   position: relative; }
@@ -170,7 +196,7 @@ p {
         width: 0.75em; } }
 
 video {
-  width: 80%; }
+  width: 100%; }
 
 .overlay {
   width: 100%;
@@ -188,7 +214,7 @@ video {
   width: 100%;
   position: relative;
   top: 25%;
-  background-color: #EFE6DF;
+  background-color: #FBF7F1;
   display: flex;
   align-items: center; }
 
