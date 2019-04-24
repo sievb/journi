@@ -75,8 +75,8 @@ section {
     text-transform: lowercase;
     letter-spacing: 0.1em; }
   #landing h2 {
-    width: 45%;
-    font-size: 1.15em;
+    width: 50%;
+    font-size: 1.25em;
     margin: 20% 0 40% 0;
     font-weight: 200;
     line-height: 150%;
@@ -101,14 +101,16 @@ section {
   margin: 5% 0;
   align-items: center; }
   .teamImg p {
-    margin: 0; }
+    margin: 0;
+    font-size: 0.9em; }
   .teamImg div {
     margin: 5% 0; }
   .teamImg i:first-of-type {
     margin-right: 5%; }
   .teamImg img {
     border-radius: 50%;
-    width: 40%; }
+    width: 45%;
+    margin-right: 5%; }
 
 footer {
   height: 10vh;
@@ -140,7 +142,6 @@ h3 {
   font-weight: 300; }
 
 h4 {
-  font-size: 1.15em;
   font-weight: bold; }
 
 p {
