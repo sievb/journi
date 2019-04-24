@@ -21,7 +21,7 @@ section
     & > div
     {
         height: 100%;
-        width: 80%;
+        width: 85%;
         margin: 15% 0;
     }
 
@@ -47,7 +47,7 @@ section
         letter-spacing: 0.1em;
     }
 
-    h3
+    h2
     {
         width: 45%;
         font-size: 1.15em;
@@ -82,33 +82,31 @@ section
     margin: 5% 0;
 }
 
-.groupPhotos
+.teamImg
 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     margin: 5% 0;
-    max-width: $desktopScreen;
+    align-items: center;
 
-    @include desktop
+    p
     {
-        margin: 25px 0;
+        margin: 0;
+    }
+
+    div
+    {
+        margin: 5% 0;
+    }
+
+    i:first-of-type
+    {
+        margin-right: 5%;
     }
 
     img
     {
         border-radius: 50%;
-        width: 25%;
-        height: auto;
-        margin: 2.5%;
-        max-width: 100px;
-
-        @include desktop
-        {
-            margin: 15px;
-        }
+        width: 40%;
     }
 }
 
@@ -150,12 +148,24 @@ h1
     }
 }
 
-h4
+h3
 {
     font-size: 1.15em;
     line-height: 150%;
     letter-spacing: 0.1em;
     font-weight: 300;
+}
+
+h4
+{
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+p
+{
+    line-height: 140%;
+    margin: 5% 0;
 }
 
 .carousel
