@@ -24,12 +24,6 @@ section
         width: 85%;
         margin: 15% 0;
     }
-
-    &:last-of-type
-    {
-        height: 100%;
-        background-color: $paleYellow;
-    }
 }
 
 #landing
@@ -85,7 +79,7 @@ section
 .teamImg
 {
     display: flex;
-    margin: 5% 0;
+    margin: 2.5% 0;
     align-items: center;
 
     p
@@ -112,34 +106,40 @@ section
     }
 }
 
-footer
+#about
 {
-    height: 10vh;
-    width: 100%;
-    background-color: #F7F3ED;
-    display: flex;
-    align-items: center;
+    background-color: $paleYellow;
+}
 
-    img
-    {
-        height: 100%;
-        width: auto;
-    }
+.footer
+{
 
     div
     {
-        margin-left: 2.5%;
+        width: auto;
+        margin: 5% 0;
+    }
+
+    a
+    {
+        font-size: 1.15em;
+        color: $darkBlue;
+        font-weight: 300;
+        text-decoration: none;
+        margin: 2.5% 0;
+        display: inline-block;
     }
 
     p
     {
-        width: auto;
+        font-weight: 600;
+        margin: 0;
     }
 }
 
 h1
 {
-    font-size: 1.75em;
+    font-size: 1.35em;
     text-transform: uppercase;
     font-weight: bold;
 

@@ -60,9 +60,6 @@ section {
     height: 100%;
     width: 85%;
     margin: 15% 0; }
-  section:last-of-type {
-    height: 100%;
-    background-color: #FBF7F1; }
 
 #landing {
   color: #fff;
@@ -98,7 +95,7 @@ section {
 
 .teamImg {
   display: flex;
-  margin: 5% 0;
+  margin: 2.5% 0;
   align-items: center; }
   .teamImg p {
     margin: 0;
@@ -112,22 +109,25 @@ section {
     width: 45%;
     margin-right: 5%; }
 
-footer {
-  height: 10vh;
-  width: 100%;
-  background-color: #F7F3ED;
-  display: flex;
-  align-items: center; }
-  footer img {
-    height: 100%;
-    width: auto; }
-  footer div {
-    margin-left: 2.5%; }
-  footer p {
-    width: auto; }
+#about {
+  background-color: #FBF7F1; }
+
+.footer div {
+  width: auto;
+  margin: 5% 0; }
+.footer a {
+  font-size: 1.15em;
+  color: #414B6E;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 2.5% 0;
+  display: inline-block; }
+.footer p {
+  font-weight: 600;
+  margin: 0; }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 1.35em;
   text-transform: uppercase;
   font-weight: bold; }
   @media (min-width: 768px) {
