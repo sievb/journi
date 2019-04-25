@@ -169,6 +169,17 @@ p
     margin: 5% 0;
 }
 
+a
+{
+    transition: 0.2s;
+}
+
+a:hover
+{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+}
+
 .carousel
 {
     margin-bottom: 0;
