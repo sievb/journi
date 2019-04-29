@@ -20,179 +20,144 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 body {
   overflow-x: hidden;
-  font-family: "Helvetica", sans-serif;
-  color: #414B6E;
-}
+  font-family: 'Helvetica', sans-serif;
+  color: #414B6E; }
 
 section {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-section > div {
-  height: 100%;
-  width: 85%;
-  margin: 15% 0;
-}
+  justify-content: center; }
+  section > div {
+    height: 100%;
+    width: 85%;
+    margin: 15% 0; }
 
 #landing {
   color: #fff;
   background-image: url("../img/journiBg.jpg");
   background-size: cover;
   background-position: 40%;
-  height: 100vh;
-}
-#landing h1 {
-  font-size: 4em;
-  text-transform: lowercase;
-  letter-spacing: 0.1em;
-}
-#landing h2 {
-  width: 50%;
-  font-size: 1.25em;
-  margin: 20% 0 40% 0;
-  font-weight: 200;
-  line-height: 150%;
-  letter-spacing: 0.05em;
-}
-#landing i {
-  font-size: 1.25em;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  padding: 4%;
-}
-#landing i:hover {
-  cursor: pointer;
-}
+  height: 100vh; }
+  #landing h1 {
+    font-size: 4em;
+    text-transform: lowercase;
+    letter-spacing: 0.1em; }
+  #landing h2 {
+    width: 50%;
+    font-size: 1.25em;
+    margin: 20% 0 40% 0;
+    font-weight: 200;
+    line-height: 150%;
+    letter-spacing: 0.05em; }
+  #landing i {
+    font-size: 1.25em;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 4%; }
+    #landing i:hover {
+      cursor: pointer; }
 
 .center {
-  text-align: center;
-}
+  text-align: center; }
 
 .logo {
   height: 50px;
-  margin: 5% 0;
-}
+  margin: 5% 0; }
 
 .teamImg {
   display: flex;
   margin: 2.5% 0;
-  align-items: center;
-}
-.teamImg p {
-  margin: 0;
-  font-size: 0.9em;
-}
-.teamImg div {
-  margin: 5% 0;
-}
-.teamImg i:first-of-type {
-  margin-right: 5%;
-}
-.teamImg img {
-  border-radius: 50%;
-  width: 45%;
-  margin-right: 5%;
-}
+  align-items: center; }
+  .teamImg p {
+    margin: 0;
+    font-size: 0.9em; }
+  .teamImg div {
+    margin: 5% 0; }
+  .teamImg i:first-of-type {
+    margin-right: 5%; }
+  .teamImg img {
+    border-radius: 50%;
+    width: 45%;
+    margin-right: 5%; }
 
 #about {
-  background-color: #FBF7F1;
-}
+  background-color: #FBF7F1; }
 
 .footer div {
   width: auto;
-  margin: 5% 0;
-}
+  margin: 5% 0; }
 .footer a {
   font-size: 1.15em;
   color: #414B6E;
   font-weight: 300;
   text-decoration: none;
   margin: 2.5% 0;
-  display: inline-block;
-}
+  display: inline-block; }
 .footer p {
   font-weight: 600;
-  margin: 0;
-}
+  margin: 0; }
 
 h1 {
   font-size: 1.35em;
   text-transform: uppercase;
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  h1 {
-    margin: 40px 0;
-    font-size: 1.35em;
-  }
-}
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    h1 {
+      margin: 40px 0;
+      font-size: 1.35em; } }
 
 h3 {
   font-size: 1.15em;
   line-height: 150%;
   letter-spacing: 0.1em;
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 h4 {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 p {
   line-height: 140%;
-  margin: 5% 0;
-}
+  margin: 5% 0; }
 
 a {
-  transition: 0.2s;
-}
+  transition: 0.2s; }
 
 a:hover {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.8);
-}
+  color: rgba(0, 0, 0, 0.8); }
 
 .carousel {
   margin-bottom: 0;
-  width: 100%;
-}
+  width: 100%; }
 
 .carouselImage {
   text-align: center;
@@ -200,27 +165,23 @@ a:hover {
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
-}
-.carouselImage img {
-  width: 50%;
-  height: auto;
-  transition: 0.3s;
-}
-@media (min-width: 425px) and (max-width: 768px) {
+  flex-wrap: wrap; }
   .carouselImage img {
-    max-width: 300px;
-  }
-}
-@media (min-width: 768px) {
-  .carouselImage img {
-    max-width: 300px;
-  }
-}
-.carouselImage div {
-  width: 100%;
-  margin: 5%;
-}
+    width: 50%;
+    height: auto;
+    position: relative;
+    transition: 0.3s; }
+    @media (min-width: 425px) and (max-width: 768px) {
+      .carouselImage img {
+        max-width: 300px; } }
+    @media (min-width: 768px) {
+      .carouselImage img {
+        max-width: 300px; } }
+  .carouselImage div {
+    width: 80%;
+    margin-top: 7.5%; }
+    .carouselImage div h4 {
+      font-size: 1.15em; }
 
 .prev, .next {
   cursor: pointer;
@@ -229,44 +190,33 @@ a:hover {
   font-weight: bold;
   font-size: 1.75em;
   transition: 0.3s ease;
-  user-select: none;
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  .prev, .next {
-    font-size: 2.25em;
-  }
-}
-.prev:hover, .next:hover {
-  color: #717171;
-}
+  user-select: none; }
+  @media (min-width: 425px) and (max-width: 768px) {
+    .prev, .next {
+      font-size: 2.25em; } }
+  .prev:hover, .next:hover {
+    color: #717171; }
 
 .dots {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 7.5%;
-}
-.dots span {
-  cursor: pointer;
-  height: 0.75em;
-  width: 0.75em;
-  margin: 0 0.1em;
-  display: inline-block;
-  background-color: #dadada;
-  border-radius: 50%;
-}
-.dots span.active, .dots span:hover {
-  background-color: #414B6E;
-}
-@media (min-width: 768px) {
+  margin-top: 0; }
   .dots span {
+    cursor: pointer;
     height: 0.75em;
     width: 0.75em;
-  }
-}
+    margin: 0 0.1em;
+    display: inline-block;
+    background-color: #dadada;
+    border-radius: 50%; }
+    .dots span.active, .dots span:hover {
+      background-color: #414B6E; }
+    @media (min-width: 768px) {
+      .dots span {
+        height: 0.75em;
+        width: 0.75em; } }
 
 video {
   width: 100%;
-  margin: 2.5% 0;
-}
+  margin: 2.5% 0; }
 
 /*# sourceMappingURL=index.css.map */
