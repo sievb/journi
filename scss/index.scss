@@ -104,6 +104,11 @@ section
         width: 45%;
         margin-right: 5%;
     }
+
+    &:last-child
+    {
+        margin-bottom: 15%;
+    }
 }
 
 #about
