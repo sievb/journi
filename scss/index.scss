@@ -187,57 +187,51 @@ a:hover
 
 .carousel
 {
-    margin-bottom: 0;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.carouselImage
+.slider
 {
-    text-align: center;
-    display: none;
-    justify-content: center;
-    align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#images
+{
+    display: flex;
+    justify-content: center;
 
     img
     {
-        width: 50%;
-        height: auto;
-        position: relative;
-        transition: 0.3s;
-
-        @include tablet
-        {
-            max-width: 300px;
-        }
-
-        @include desktop
-        {
-            max-width: 300px;
-        }
-    }
-
-    div
-    {
-        width: 80%;
-        margin-top: 7.5%;
-
-        h4
-        {
-            font-size: 1.15em;
-        }
+        width: 60%;
+        height: 100%;
     }
 }
 
-.prev, .next 
+#sliderInfo
+{
+    text-align: center;
+    margin-top: 7.5%;
+    height: 25vh;
+
+    h4
+    {
+        font-size: 1.15em;
+    }
+
+    p
+    {
+        margin-bottom: 0;
+    }
+}
+
+.arrows
 {
     cursor: pointer;
-    width: auto;
-    margin: 10%;
     font-weight: bold;
     font-size: 1.75em;
     transition: 0.3s ease;
@@ -254,36 +248,30 @@ a:hover
     }
 }
 
-.dots
-{
-    text-align: center;
-    margin-top: 0;
-    
-    span
-    {
-        cursor: pointer;
-        height: 0.75em;
-        width: 0.75em;
-        margin: 0 0.1em;
-        display: inline-block;
-        background-color: #dadada;
-        border-radius: 50%;
-
-        &.active, &:hover
-        {
-            background-color: $darkBlue;
-        }
-
-        @include desktop
-        {
-            height: 0.75em;
-            width: 0.75em;
-        }
-    }
-}
-
 video
 {
     width: 100%;
     margin: 2.5% 0;
 }
+
+#sliderCounter
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    div
+    {
+        background-color: #dadada;
+        border-radius: 50%;
+        margin: 2.5%;
+        padding: 2.5%;
+        transition: all 0.3s;
+
+        &:hover, .active
+        {
+            background-color: #888888;
+        }
+    }
+}
+

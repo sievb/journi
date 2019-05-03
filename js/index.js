@@ -1,133 +1,82 @@
-// var slideIndex = 1;
-// showSlides(slideIndex);
+var currIndex = 0;
+var prevIndex = 0;
 
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
 
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
+const sliderData = [
+    {
+        image: "img/iPhone1.png",
+        header: "Know Your Trips",
+        content: "Get to know the city you're travelling to ahead of time and be prepared. The app provides a variety of concise information about your trip locations"
+    },
+    {
+        image: "img/iPhone2.png",
+        header: "Header 2",
+        content: "Content 2"
+    },
+    {
+        image: "img/iPhone3.png",
+        header: "Header 3",
+        content: "Content 3"
+    }
+]
 
-// $(".prev").on("click", function() {
-//     $(".carouselImage img").animate({
-//         left: "-50px",
-//         opacity: 0
-//     }, 10)
-//     plusSlides(-1);
+$(document).ready(function () {
+    init();
 
-// })
+    $('#sliderCounter div').click(function() {
+        prevIndex = currIndex;
+        currIndex = $(this).index();
+        updateSlider();
+    })
+});
 
-// $(".next").on("click", function() {
-//     plusSlides(1);
-// })
+function init() {
+    $('#images img').attr('src', sliderData[0].image);
+    $('#sliderInfo h4').text(sliderData[0].header);
+    $('#sliderInfo p').text(sliderData[0].content);
 
-// function showSlides(n) {
-//     var i;
-//     var slideImages = $(".carouselImage img");
-//     var caption = $(".caption");
-//     var dots = document.getElementsByClassName("dot");
-//     if (n > slideImages.length) {slideIndex = 1};
-//     if (n < 1) {slideIndex = slideImages.length};
-//     for (i = 0; i < slideImages.length; i++) {
-//         slideImages[i].style.display = "none";  
-//         caption[i].style.display = "none"
-//     };
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     };
-//     slideImages[slideIndex-1].style.display = "flex";
-//     caption[slideIndex-1].style.display = "block";
-//     dots[slideIndex-1].className += " active";
-// };
+    sliderData.map((data, key) => {
+        let counter = '<div></div>';
+        $('#sliderCounter').append(counter);
+    });
+    $(`#sliderCounter div:eq(${currIndex})`).css('background-color', '#888888');
+}
 
-// $(document).ready(function() {
-//     var slideCount = $(".carouselImg img").length;
-//     var slideWidth = $(".carouselImg img").width();
-//     var slideHeight = $(".carouselImg img").height();
-//     var sliderUIWidth = slideCount * slideWidth;
+$('#prev').click(function () {
+    prevIndex = currIndex;
+    currIndex--;
+    currIndex = currIndex < 0 ? sliderData.length - 1 : currIndex;
+    updateSlider();
+})
 
-//     $(".carousel").css({width: slideWidth, height: slideHeight});
-//     $(".carouselImg").css({width: sliderUIWidth, marginLeft: -slideWidth});
-//     $(".carouselImg img:last-child").prependTo(".carouselImg");
+$('#next').click(function () {
+    prevIndex = currIndex;
+    currIndex++;
+    currIndex = currIndex > sliderData.length - 1 ? 0 : currIndex;
+    updateSlider();
+})
 
-//     function moveLeft() {
-//         $("carouselImg img").animate({
-//             left: + slideWidth
-//         }, 200, function() {
-//             $(".carouselImg img:last-child").prependTo(".carousel");
-//             $(".carouselImg").css("left", "");
-//         });
-//     };
 
-//     function moveRight() {
-//         $("carouselImg img").animate({
-//             left: - slideWidth
-//         }, 200, function() {
-//             $(".carouselImg img:first-child").prependTo(".carousel");
-//             $(".carouselImg").css("left", "");
-//         });
-//     };
 
-//     $(".prev").on("click", function() {
-//         moveLeft();
-//     });
+function updateSlider() {
+    $('#sliderCounter div').css('background-color', '#dadada');
+    $('#images img').animate({
+        'opacity': 0
+    }, 50, function() {
+        $(this).attr('src', sliderData[currIndex].image).animate({
+            'opacity': 1
+        });
+    });
 
-//     $(".next").on("click", function() {
-//         moveRight();
-//     });
-// });
+    $('#sliderInfo').animate({
+        'opacity': 0
+    }, 50, function() {
+        $(this).find('h4').text(sliderData[currIndex].header);
+        $(this).find('p').text(sliderData[currIndex].content);
+        $(this).animate({
+            'opacity': 1
+        });
+    });
 
-// $(document).ready(function() {
-//     var i= 0;
-//     //when the next button is clicked on
-//     $('.next').on("click", function(){
-//         //increase the display picture index by 1
-//         i = i + 1;
-//         //if we are at the end of the image queue, set the index back to 0
-//         if (i == $('img').length) {
-//             i=0;
-//         }
-//         //set current image and previous image
-//         var currentImg = $('.carouselImg img').eq(i);
-//         var prevImg = $('.carouselImg img').eq(i-1);
-//         //call function to animate the rotation of the images to the right
-//         animateImage(prevImg, currentImg);	
-//     });
-//     //when the previous button is clicked on
-//     $('.prev').on("click", function(){
-//         //if we are at the beginning of the image queue, set the previous image to the first image and the current image to the last image of the queue
-//         if (i==0) {	
-//             prevImg = $('img').eq(0);
-//             i=$('img').length-1;
-//             currentImg = $('img').eq(i);
-//         }
-//         //decrease the display picture index by 1
-//         else {
-//             i=i-1;
-//             //set current and previous images
-//             currentImg = $('img').eq(i);
-//             prevImg = $('img').eq(i+1);
-//         }
-//         //call function to animate the rotation of the images to the left
-//         animateImageLeft(prevImg, currentImg);	
-//     });
-//     //function to animate the rotation of the images to the left
-//     function animateImageLeft(prevImg, currentImg) {
-//         //move the image to be displayed off the visible container to the right
-//         currentImg.css({"left":"100%"});
-//         //slide the image to be displayed from off the container onto the visible container to make it slide from the right to left
-//         currentImg.animate({"left":"0%"}, 1000);
-//         //slide the previous image off the container from right to left
-//         prevImg.animate({"left":"-100%"}, 1000);
-//     }
-//     //function to animate the rotation of the images to the right
-//     function animateImage(prevImg, currentImg) {
-//         //move the image to be displayed off the container to the left
-//         currentImg.css({"left":"-100%"});
-//         //slide the image to be displayed from off the container onto the container to make it slide from left to right
-//         currentImg.animate({"left":"0%"}, 1000);
-//         //slide the image from on the container to off the container to make it slide from left to right
-//         prevImg.animate({"left":"100%"}, 1000);	
-//     }
-// });
+    $(`#sliderCounter div:eq(${currIndex})`).css('background-color', '#888888');
+}

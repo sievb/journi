@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>journi</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>journi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
+</head>
 
 <body>
 
@@ -23,48 +24,44 @@
     <section>
         <div class="center">
             <img src="img/blueLogo.svg" class="logo" alt="">
-            <h3>Journi is a mobile application to help young travelers be more aware of their surroundings and provide them with accessible emergency support.</h3>
+            <h3>Journi is a mobile application to help young travelers be more aware of their surroundings and provide
+                them with accessible emergency support.</h3>
         </div>
         <video src="video/vid.mp4" controls></video>
     </section>
 
     <section>
         <div class="carousel">
-            <div class="carouselImage">
-                <a class="prev">&#10094;</a>
-                <img src="img/iPhone1.png" alt="">
-                <img src="img/iPhone2.png" alt="">
-                <img src="img/iPhone3.png" alt="">
-                <a class="next">&#10095;</a>
-                <div class="caption">
-                    <h4>Know your trips</h4>
-                    <p>Get to know the city you're travelling to ahead of time and be prepared. The app provides a variety of concise information about your trip locations.</p>
+            <div class="slider">
+                <div class="arrows">
+                    <span id="prev">&#10094;</span>
                 </div>
-
-                <div class="caption">
-                    <h4>Header 2</h4>
-                    <p>Details 2</p>
+    
+                <div id="images">
+                    <img src="" alt="">
                 </div>
-
-                <div class="caption">
-                    <h4>Header 3</h4>
-                    <p>Details 3</p>
+    
+                <div class="arrows">
+                    <span id="next">&#10095;</span>
                 </div>
             </div>
+            <div id="sliderInfo">
+                <h4>Know Your Trips</h4>
+                <p>
+                    Get to know the city you're travelling to ahead of time and be prepared. The app provides a variety of concise information about your trip locations
+                </p>
+            </div>
+            
+            <div id="sliderCounter">
+            </div>
         </div>
-
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-
     </section>
 
     <section id="about">
         <div class="center">
             <h1>Who we are</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut impedit, porro quas explicabo consequuntur maiores odit hic ea aut culpa, atque natus in tempora unde! Rem.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut impedit, porro quas explicabo consequuntur
+                maiores odit hic ea aut culpa, atque natus in tempora unde! Rem.</p>
         </div>
 
         <div class="teamImg">
@@ -142,9 +139,10 @@
                 <p>University of Washingon, Bothell</p>
             </div>
         </div>
-    </sec>
+        </sec>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/index.js"></script>
 </body>
+
 </html>
