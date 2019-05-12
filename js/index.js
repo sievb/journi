@@ -21,6 +21,13 @@ const sliderData = [
 ]
 
 $(document).ready(function () {
+    
+
+    if($(window).width() < 768) {
+        $('#sliderInfo').after("<div id='sliderCounter'></div>");
+    } else {
+        $('#slide').after("<div id='sliderCounter'></div>");
+    }
     init();
 
     $('#sliderCounter div').click(function() {

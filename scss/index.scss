@@ -32,7 +32,7 @@ section
         @include desktop
         {
             margin: 5% 0;
-            width: 90%;
+            width: 70%;
         }
     }
 }
@@ -127,6 +127,29 @@ section
     }
 }
 
+#description
+{
+    div
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include desktop
+        {
+            flex-direction: row;
+            width: 70%;
+            text-align: start;
+            align-items: center;
+
+            h3
+            {
+                margin: 0 5%;
+            }
+        }
+    }
+}
+
 .center
 {
     text-align: center;
@@ -139,25 +162,65 @@ section
 
     @include desktop
     {
-        height: 75px;
+        margin: 0;
+    }
+}
+
+#about
+{
+    background-color: $paleYellow;
+
+    & > div
+    {
+        margin-bottom: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#aboutTeam
+{
+    @include desktop
+    {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
     }
 }
 
 .teamImg
 {
     display: flex;
-    margin: 2.5% 0;
+    margin: 7.5% 0;
     align-items: center;
+
+    @include desktop
+    {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    h4
+    {
+        @include desktop
+        {
+            font-size: 1.25em;
+            margin: 2.5% 0;
+        }
+    }
 
     p
     {
         margin: 0;
         font-size: 0.9em;
-    }
 
-    div
-    {
-        margin: 5% 0;
+        @include desktop
+        {
+            font-size: 1em;
+        }
     }
 
     i:first-of-type
@@ -165,22 +228,50 @@ section
         margin-right: 5%;
     }
 
+    div
+    {
+        min-width: 125px;
+
+        @include tablet
+        {
+            min-width: 200px;
+        }
+
+        @include desktop
+        {
+            min-width: auto;
+            margin: 2.5% 0;
+        }
+    }
+
     img
     {
         border-radius: 50%;
         width: 45%;
         margin-right: 5%;
+        max-width: 200px;
+
+        @include tablet
+        {
+            margin-right: 8%;
+        }
+
+        @include desktop
+        {
+            margin: 7.5% 0;
+            width: 75%;
+        }
     }
 
     &:last-child
     {
         margin-bottom: 15%;
-    }
-}
 
-#about
-{
-    background-color: $paleYellow;
+        @include desktop
+        {
+            margin-bottom: 7.5%;
+        }
+    }
 }
 
 .footer
@@ -233,6 +324,17 @@ h3
 h4
 {
     font-weight: bold;
+    font-size: 1em;
+
+    @include tablet
+    {
+        font-size: 1.25em;
+    }
+
+    @include desktop
+    {
+        font-size: 1.5em;
+    }
 }
 
 p
@@ -257,6 +359,11 @@ a:hover
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include desktop
+    {
+        flex-direction: row;
+    }
 }
 
 .slider
@@ -265,6 +372,17 @@ a:hover
     justify-content: space-between;
     align-items: center;
 
+    @include desktop
+    {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+}
+
+#slide
+{
+    display: flex;
+    align-items: center;
 }
 
 #images
@@ -276,12 +394,12 @@ a:hover
     {
         width: 60%;
         height: 100%;
-        max-width: 275px;
+        max-width: 250px;
 
         @include desktop
         {
             width: 50%;
-            max-width: 500px;
+            max-width: none;
         }
     }
 }
@@ -294,18 +412,25 @@ a:hover
 
     @include tablet
     {
-        height: 20vh;
+        height: 22.5vh;
     }
 
     @include desktop
     {
-        height: 150px;
-        margin-top: 5%;
+        text-align: left;
+        margin: 0;
+        height: auto;
+        width: 100%;
     }
 
     h4
     {
         font-size: 1.15em;
+
+        @include desktop
+        {
+            font-size: 1.5em;
+        }
     }
 
     p
@@ -315,7 +440,6 @@ a:hover
         @include desktop
         {
             margin: 2.5% auto 0 auto;
-            width: 50%;
         }
     }
 }
@@ -350,6 +474,11 @@ video
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @include desktop
+    {
+        margin-top: 5%;
+    }
 
     div
     {
