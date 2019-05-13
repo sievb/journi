@@ -2,6 +2,10 @@
 @import 'reset';
 
 //Any specific pixel numbers are set so elements won't get any larger on bigger screens
+html
+{
+    scroll-behavior: smooth;
+}
 
 body
 {
@@ -40,22 +44,18 @@ section
 #landing
 {
     color: #fff;
-    background-image: url("../img/journiBg.jpg");
+    background-image: url("../img/landing.jpg");
     background-size: cover;
     background-position: 40%;
     height: 100vh;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: contrast(60%);
 
     @include tablet
     {
         background-position: center;
-        background-image: url('../img/journiBgTablet.png');
-    }
-
-    @include desktop
-    {
-        background-position: center;
-        background-image: url('../img/journiBgDesktop.png');
     }
 
     div
@@ -64,6 +64,8 @@ section
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        width: 85%;
+        text-align: center;
     }
 
     h1
@@ -72,15 +74,19 @@ section
         text-transform: lowercase;
         letter-spacing: 0.1em;
         flex: 1;
+        margin: 0;
 
         @include tablet
         {
-            display: none;
+            width: 100%;
+            flex: 0;
         }
 
         @include desktop
         {
-            display: none;
+            width: 100%;
+            font-size: 7em;
+            flex: 0;
         }
     }
 
@@ -93,12 +99,15 @@ section
 
         @include tablet
         {
-            display: none;
+            width: 100%;
+            flex: 0;
         }
 
         @include desktop
         {
-            display: none;
+            width: 100%;
+            font-size: 1.5em;
+            flex: 0;
         }
     }
 
@@ -109,6 +118,21 @@ section
         border-radius: 50%;
         padding: 15px;
 
+        @include desktop
+        {
+            font-size: 1.5em;
+        }
+    }
+
+    a
+    {
+        color: #fff;
+
+        &:hover
+        {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
         @include tablet
         {
             align-self: flex-end;
@@ -117,12 +141,6 @@ section
         @include desktop
         {
             align-self: flex-end;
-            font-size: 1.5em;
-        }
-        
-        &:hover
-        {
-            cursor: pointer;
         }
     }
 }
@@ -176,6 +194,16 @@ section
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet
+        {
+            margin: 10% 0;
+        }
+
+        @include desktop
+        {
+            margin: 5% 0;
+        }
     }
 }
 

@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Helvetica", sans-serif;
@@ -84,22 +88,18 @@ section > div {
 
 #landing {
   color: #fff;
-  background-image: url("../img/journiBg.jpg");
+  background-image: url("../img/landing.jpg");
   background-size: cover;
   background-position: 40%;
   height: 100vh;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: contrast(60%);
 }
 @media (min-width: 425px) and (max-width: 768px) {
   #landing {
     background-position: center;
-    background-image: url("../img/journiBgTablet.png");
-  }
-}
-@media (min-width: 768px) {
-  #landing {
-    background-position: center;
-    background-image: url("../img/journiBgDesktop.png");
   }
 }
 #landing div {
@@ -107,21 +107,27 @@ section > div {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  width: 85%;
+  text-align: center;
 }
 #landing h1 {
   font-size: 4em;
   text-transform: lowercase;
   letter-spacing: 0.1em;
   flex: 1;
+  margin: 0;
 }
 @media (min-width: 425px) and (max-width: 768px) {
   #landing h1 {
-    display: none;
+    width: 100%;
+    flex: 0;
   }
 }
 @media (min-width: 768px) {
   #landing h1 {
-    display: none;
+    width: 100%;
+    font-size: 7em;
+    flex: 0;
   }
 }
 #landing h2 {
@@ -132,12 +138,15 @@ section > div {
 }
 @media (min-width: 425px) and (max-width: 768px) {
   #landing h2 {
-    display: none;
+    width: 100%;
+    flex: 0;
   }
 }
 @media (min-width: 768px) {
   #landing h2 {
-    display: none;
+    width: 100%;
+    font-size: 1.5em;
+    flex: 0;
   }
 }
 #landing i {
@@ -146,19 +155,26 @@ section > div {
   border-radius: 50%;
   padding: 15px;
 }
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 768px) {
   #landing i {
+    font-size: 1.5em;
+  }
+}
+#landing a {
+  color: #fff;
+}
+#landing a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  #landing a {
     align-self: flex-end;
   }
 }
 @media (min-width: 768px) {
-  #landing i {
+  #landing a {
     align-self: flex-end;
-    font-size: 1.5em;
   }
-}
-#landing i:hover {
-  cursor: pointer;
 }
 
 #description div {
@@ -200,6 +216,16 @@ section > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  #about > div {
+    margin: 10% 0;
+  }
+}
+@media (min-width: 768px) {
+  #about > div {
+    margin: 5% 0;
+  }
 }
 
 @media (min-width: 768px) {
