@@ -86,16 +86,19 @@ section > div {
   }
 }
 
-#landing {
-  color: #fff;
-  background-image: url("../img/landing.jpg");
+.parallax {
   background-size: cover;
-  background-position: 40%;
-  height: 100vh;
+  background-position: 50% 12.5%;
+  height: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  filter: contrast(60%);
+}
+
+#landing {
+  color: #fff;
+  background-image: url("../img/landing.png");
+  height: 100vh;
 }
 @media (min-width: 425px) and (max-width: 768px) {
   #landing {
@@ -372,13 +375,16 @@ a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.carousel {
+#carousel {
+  background-position: center bottom;
+}
+#carousel > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 768px) {
-  .carousel {
+  #carousel > div {
     flex-direction: row;
   }
 }
@@ -469,7 +475,6 @@ a:hover {
 
 video {
   width: 100%;
-  margin: 2.5% 0;
 }
 
 #sliderCounter {

@@ -41,17 +41,21 @@ section
     }
 }
 
-#landing
+.parallax
 {
-    color: #fff;
-    background-image: url("../img/landing.jpg");
     background-size: cover;
-    background-position: 40%;
-    height: 100vh;
+    background-position: 50% 12.5%;
+    height: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: contrast(60%);
+}
+
+#landing
+{
+    color: #fff;
+    background-image: url("../img/landing.png");
+    height: 100vh;
 
     @include tablet
     {
@@ -382,15 +386,20 @@ a:hover
     color: rgba(0, 0, 0, 0.8);
 }
 
-.carousel
+#carousel
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-position: center bottom;
 
-    @include desktop
+    & > div
     {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop
+        {
+            flex-direction: row;
+        }
     }
 }
 
@@ -494,7 +503,6 @@ a:hover
 video
 {
     width: 100%;
-    margin: 2.5% 0;
 }
 
 #sliderCounter
