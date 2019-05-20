@@ -5,19 +5,16 @@ var prevIndex = 0;
 const sliderData = [
     {
         image: "img/iPhone1.png",
-        bgImage: "img/bg1.png",
         header: "Know Your Trips",
         content: "Get to know the city you're travelling to ahead of time and be prepared. The app provides a variety of concise information about your trip locations"
     },
     {
         image: "img/iPhone2.png",
-        bgImage: "img/bg2.png",
         header: "Header 2",
         content: "Content 2"
     },
     {
         image: "img/iPhone3.png",
-        bgImage: "img/bg3.png",
         header: "Header 3",
         content: "Content 3"
     }
@@ -42,7 +39,6 @@ $(document).ready(function () {
 
 function init() {
     $('#images img').attr('src', sliderData[0].image);
-    $('#carousel').css('background-image', 'url(' + sliderData[0].bgImage + ')');
     $('#sliderInfo h4').text(sliderData[0].header);
     $('#sliderInfo p').text(sliderData[0].content);
 
@@ -71,15 +67,6 @@ $('#next').click(function () {
 
 function updateSlider() {
     $('#sliderCounter div').css('background-color', '#dadada');
-
-    $('#carousel').animate({
-        'opacity': 0.5
-    }, 50, function() {
-        $(this).css('background-image', 'url(' + sliderData[currIndex].bgImage + ')');
-        $(this).animate({
-            'opacity': 1
-        }, 50);
-    });
 
     $('#images img').animate({
         'opacity': 0
