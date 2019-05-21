@@ -5,18 +5,33 @@ var prevIndex = 0;
 const sliderData = [
     {
         image: "img/iPhone1.png",
+        header: "View Your Trips",
+        content: "Keep track of all your upcoming trips in one place by storing them in-app"
+    },
+    {
+        image: "img/iPhone2.png",
+        header: "Add New Trips Easily",
+        content: "Create new trips by filling in all the fields, or import existing ones by connecting to your Airbnb account"
+    },
+    {
+        image: "img/iPhone3.png",
         header: "Know Your Trips",
         content: "Get to know the city you're travelling to ahead of time and be prepared. The app provides a variety of concise information about your trip locations"
     },
     {
-        image: "img/iPhone2.png",
-        header: "Header 2",
-        content: "Content 2"
+        image: "img/iPhone4.png",
+        header: "Keep Info Handy",
+        content: "All your important information is shown in one place for ease of access in case of emergencies, or if you just need a refresher"
     },
     {
-        image: "img/iPhone3.png",
-        header: "Header 3",
-        content: "Content 3"
+        image: "img/iPhone5.png",
+        header: "Safety Set-up",
+        content: "Arrange check-in times for the app, as well as organizing contacts and a message for them in case of emergency"
+    },
+    {
+        image: "img/iPhone6.png",
+        header: "See What's Around",
+        content: "Get an idea of what resources are around you, such as 24-hour establishments and bus stops, as well as police stations and hospitals."
     }
 ]
 
