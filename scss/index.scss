@@ -378,6 +378,26 @@ p
 a
 {
     transition: 0.2s;
+
+    &:link
+    {
+        color: $darkBlue;
+    }
+
+    &:visited
+    {
+        color: $darkBlue;
+    }
+
+    &:hover
+    {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:active
+    {
+        color: rgba(0, 0, 0, 0.9);
+    }
 }
 
 a:hover
@@ -518,8 +538,8 @@ video
     {
         background-color: #dadada;
         border-radius: 50%;
-        margin: 0.5em;
-        padding: 0.5em;
+        margin: 0.35em;
+        padding: 0.4em;
         transition: all 0.3s;
 
         &:hover, .active
