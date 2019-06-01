@@ -1,6 +1,28 @@
 var currIndex = 0;
 var prevIndex = 0;
 
+const aboutImageData = [
+    {
+        image: "img/profile.png",
+        hover: "img/angryKirb.jpg",
+    },
+    {
+        image: "img/profile.png",
+        hover: "img/angryKirb.jpg",
+    },
+    {
+        image: "img/profile.png",
+        hover: "img/angryKirb.jpg",
+    },
+    {
+        image: "img/profile.png",
+        hover: "img/angryKirb.jpg",
+    },
+    {
+        image: "img/profile.png",
+        hover: "img/angryKirb.jpg",
+    }
+];
 
 const sliderData = [
     {
@@ -33,11 +55,9 @@ const sliderData = [
         header: "See What's Around",
         content: "Get an idea of what resources are around you, such as 24-hour establishments and bus stops, as well as police stations and hospitals."
     }
-]
+];
 
 $(document).ready(function () {
-    
-
     if($(window).width() < 768) {
         $('#sliderInfo').after("<div id='sliderCounter'></div>");
     } else {
@@ -62,6 +82,8 @@ function init() {
         $('#sliderCounter').append(counter);
     });
     $(`#sliderCounter div:eq(${currIndex})`).css('background-color', '#888888');
+
+    
 }
 
 $('#prev').click(function () {

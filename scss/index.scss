@@ -239,7 +239,7 @@ section
     {
         @include desktop
         {
-            font-size: 1.25em;
+            font-size: 1.15em;
             margin: 2.5% 0;
         }
     }
@@ -320,7 +320,6 @@ section
         font-size: 1.15em;
         color: $darkBlue;
         font-weight: 300;
-        text-decoration: none;
         margin: 2.5% 0;
         display: inline-block;
     }
@@ -378,6 +377,7 @@ p
 a
 {
     transition: 0.2s;
+    text-decoration: none;
 
     &:link
     {
@@ -391,6 +391,7 @@ a
 
     &:hover
     {
+        cursor: pointer;
         color: rgba(0, 0, 0, 0.5);
     }
 
@@ -398,12 +399,6 @@ a
     {
         color: rgba(0, 0, 0, 0.9);
     }
-}
-
-a:hover
-{
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.8);
 }
 
 #carousel
