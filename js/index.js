@@ -1,26 +1,10 @@
 var currIndex = 0;
 var prevIndex = 0;
 
-const aboutImageData = [
+const imgData = [
     {
-        image: "img/profile.png",
-        hover: "img/angryKirb.jpg",
-    },
-    {
-        image: "img/profile.png",
-        hover: "img/angryKirb.jpg",
-    },
-    {
-        image: "img/profile.png",
-        hover: "img/angryKirb.jpg",
-    },
-    {
-        image: "img/profile.png",
-        hover: "img/angryKirb.jpg",
-    },
-    {
-        image: "img/profile.png",
-        hover: "img/angryKirb.jpg",
+        image: 'img/profile.png',
+        hover: 'img/sleepKirb.png'
     }
 ];
 
@@ -81,9 +65,8 @@ function init() {
         let counter = '<div></div>';
         $('#sliderCounter').append(counter);
     });
-    $(`#sliderCounter div:eq(${currIndex})`).css('background-color', '#888888');
 
-    
+    $(`#sliderCounter div:eq(${currIndex})`).css('background-color', '#888888');
 }
 
 $('#prev').click(function () {
@@ -100,7 +83,53 @@ $('#next').click(function () {
     updateSlider();
 })
 
+$('.teamImg img').hover(
+    function() {
+        switch($(this).data('name')) {
+            case 'Angela':
+                $(this).attr('src', imgData[0].hover);
+                break;
 
+            case 'Su':
+                $(this).attr('src', imgData[1].hover);
+                break;
+
+            case 'Ben':
+                $(this).attr('src', imgData[2].hover);
+                break;
+
+            case 'Junior':
+                $(this).attr('src', imgData[3].hover);
+                break;
+
+            case 'Yin':
+                $(this).attr('src', imgData[4].hover);
+                break;
+        }
+    }, function() {
+        switch($(this).data('name')) {
+            case 'Angela':
+                $(this).attr('src', imgData[0].image);
+                break;
+
+            case 'Su':
+                $(this).attr('src', imgData[1].image);
+                break;
+
+            case 'Ben':
+                $(this).attr('src', imgData[2].image);
+                break;
+
+            case 'Junior':
+                $(this).attr('src', imgData[3].image);
+                break;
+
+            case 'Yin':
+                $(this).attr('src', imgData[4].image);
+                break;
+        }
+    }
+);
 
 function updateSlider() {
     $('#sliderCounter div').css('background-color', '#dadada');
