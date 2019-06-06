@@ -3,8 +3,24 @@ var prevIndex = 0;
 
 const imgData = [
     {
-        image: 'img/profile.png',
-        hover: 'img/sleepKirb.png'
+        image: 'img/angela1.jpg',
+        hover: 'img/angela2.jpg'
+    },
+    {
+        image: 'img/su1.jpg',
+        hover: 'img/su2.jpg'
+    },
+    {
+        image: 'img/ben1.jpg',
+        hover: 'img/ben2.png'
+    },
+    {
+        image: 'img/junior1.jpg',
+        hover: 'img/junior2.jpg'
+    },
+    {
+        image: 'img/yin1.png',
+        hover: 'img/yin2.png'
     }
 ];
 

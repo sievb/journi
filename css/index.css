@@ -478,8 +478,9 @@ a:active {
   color: #717171;
 }
 
-video {
-  width: 100%;
+iframe {
+  width: 100vw;
+  height: 100vh;
 }
 
 #sliderCounter {
